@@ -1,5 +1,5 @@
-view: wtrace_pk_standard {
-  sql_table_name: @{standard}
+view: wtrace_pk_all {
+  sql_table_name: `qualified-ace-273011.wtrace.wtrace_PK_all`
     ;;
 
   dimension: country {
@@ -32,6 +32,16 @@ view: wtrace_pk_standard {
     sql: ${TABLE}.dns2/1000 ;;
   }
 
+  dimension: dns3 {
+    type: number
+    sql: ${TABLE}.dns3/1000 ;;
+  }
+
+  dimension: dns4 {
+    type: number
+    sql: ${TABLE}.dns4/1000 ;;
+  }
+
   dimension: http1 {
     type: number
     sql: ${TABLE}.http1/1000 ;;
@@ -40,6 +50,16 @@ view: wtrace_pk_standard {
   dimension: http2 {
     type: number
     sql: ${TABLE}.http2/1000 ;;
+  }
+
+  dimension: http3 {
+    type: number
+    sql: ${TABLE}.http3/1000 ;;
+  }
+
+  dimension: http4 {
+    type: number
+    sql: ${TABLE}.http4/1000 ;;
   }
 
   dimension: ip {
@@ -67,6 +87,16 @@ view: wtrace_pk_standard {
     sql: ${TABLE}.tcp2/1000 ;;
   }
 
+  dimension: tcp3 {
+    type: number
+    sql: ${TABLE}.tcp3/1000 ;;
+  }
+
+  dimension: tcp4 {
+    type: number
+    sql: ${TABLE}.tcp4/1000 ;;
+  }
+
   measure: http1_p95 {
     type: percentile
     percentile: 95
@@ -77,6 +107,17 @@ view: wtrace_pk_standard {
     type: percentile
     percentile: 95
     sql: ${http2} ;;
+  }
+  measure: http3_p95 {
+    type: percentile
+    percentile: 95
+    sql: ${http3} ;;
+  }
+
+  measure: http4_p95 {
+    type: percentile
+    percentile: 95
+    sql: ${http4} ;;
   }
 
   measure: tcp1_p95 {
@@ -90,6 +131,17 @@ view: wtrace_pk_standard {
     percentile: 95
     sql: ${tcp2} ;;
   }
+  measure: tcp3_p95 {
+    type: percentile
+    percentile: 95
+    sql: ${tcp3} ;;
+  }
+
+  measure: tcp4_p95 {
+    type: percentile
+    percentile: 95
+    sql: ${tcp4} ;;
+  }
 
   measure: http1_p50 {
     type: percentile
@@ -102,7 +154,17 @@ view: wtrace_pk_standard {
     percentile: 50
     sql: ${http2} ;;
   }
+  measure: http3_p50 {
+    type: percentile
+    percentile: 50
+    sql: ${http3} ;;
+  }
 
+  measure: http4_p50 {
+    type: percentile
+    percentile: 50
+    sql: ${http4} ;;
+  }
   measure: tcp1_p50 {
     type: percentile
     percentile: 50
@@ -114,7 +176,17 @@ view: wtrace_pk_standard {
     percentile: 50
     sql: ${tcp2} ;;
   }
+  measure: tcp3_p50 {
+    type: percentile
+    percentile: 50
+    sql: ${tcp3} ;;
+  }
 
+  measure: tcp4_p50 {
+    type: percentile
+    percentile: 50
+    sql: ${tcp4} ;;
+  }
   measure: count {
     type: count
     drill_fields: []

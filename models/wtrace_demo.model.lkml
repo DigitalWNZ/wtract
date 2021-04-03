@@ -14,3 +14,5 @@ persist_with: wtrace_demo_default_datagroup
 explore: wtrace_pk_premium {}
 
 explore: wtrace_pk_standard {}
+
+explore: wtrace_pk_all {}

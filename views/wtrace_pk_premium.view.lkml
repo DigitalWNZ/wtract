@@ -106,13 +106,13 @@ view: wtrace_pk_premium {
 
   measure: tcp1_p50 {
     type: percentile
-    percentile: 95
+    percentile: 50
     sql: ${tcp1} ;;
   }
 
   measure: tcp2_p50 {
     type: percentile
-    percentile: 95
+    percentile: 50
     sql: ${tcp2} ;;
   }
 
