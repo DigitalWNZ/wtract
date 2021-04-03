@@ -2,6 +2,7 @@ connection: "wtrace_demo"
 
 # include all the views
 include: "/views/**/*.view"
+include: "/dashboard/*.dashboard.lookml"
 
 datagroup: wtrace_demo_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
