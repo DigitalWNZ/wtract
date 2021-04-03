@@ -1,5 +1,5 @@
-- dashboard: wtrace_demo
-  title: wtrace_demo
+- dashboard: wtrace_demo_premium
+  title: wtrace_demo_premium
   layout: newspaper
   preferred_viewer: dashboards-next
   elements:
