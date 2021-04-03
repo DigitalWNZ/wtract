@@ -1,5 +1,5 @@
-view: wtrace_pk_premium {
-  sql_table_name: @{premium}
+view: wtrace_pk_standard {
+  sql_table_name: @{standard}
     ;;
 
   dimension: country {
@@ -67,7 +67,6 @@ view: wtrace_pk_premium {
     sql: ${TABLE}.tcp2/1000 ;;
   }
 
-
   measure: http1_p95 {
     type: percentile
     percentile: 95
@@ -115,8 +114,6 @@ view: wtrace_pk_premium {
     percentile: 95
     sql: ${tcp2} ;;
   }
-
-
 
   measure: count {
     type: count
